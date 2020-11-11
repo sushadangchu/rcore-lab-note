@@ -293,7 +293,6 @@ pub type MemoryResult<T> = Result<T, &'static str>;
 
 #### 5. main函数调用MemorySet中的activate()函数
 
-##### activate()分析：
 
 ​		memoryset中调用的实际上市mapping里面的activate函数，这个函数很简单，就是讲刚才映射的页表基址地址放入satp中，并刷新tlb，替代了一开始写的那个粗糙的页表，这样页表的精细化就真正完成了。
 
